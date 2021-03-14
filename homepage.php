@@ -1,0 +1,220 @@
+<?php
+session_start();
+include("connection.php");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .wrapper{
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.div1{
+  height: 500px;
+  background-image: url(login2nd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+.div1 h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size:  50px;
+  padding-top: 20px;
+}
+  </style>
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-info border fixed-top">
+  <a class="navbar-brand" href="homepage.php">
+    <img src="logo1.png" width="30px" height="30px"> RK COMPUTER
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="try.html">Home</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="contact-from.html">Contact</a>
+      </li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Student Detail
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="newstudent.php">Add student</a>
+          <a class="dropdown-item" href="view_student.php">View Student </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="iamark.php">IA Marks</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Course
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">ADCS</a>
+          <a class="dropdown-item" href="#">DCS</a>
+          <a class="dropdown-item" href="#">Talley & Accounting </a>
+          <a class="dropdown-item" href="#">Office Package</a>
+        </div>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="result.php">Result</a>
+      </li>
+      
+    </ul>
+    <?php
+    echo "welcome ".$_SESSION['username'] ."<br>";
+    echo "  Today is " . date("l");  echo date(" Y-m-d")   . "<br>";
+    ?>
+
+   <a class="btn btn-warning text-white"; href="sign_portal.php"; role="button"; hspace="10px";>
+     LOGIN
+  </a>
+
+  </div>
+</nav>
+
+
+
+
+<section class="container-fluid" style="padding-top: 70px;">
+<div class="row">
+  <div class="col-3 fixed">
+    <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: fixed;">
+      <a class="nav-link active" id="v-pills-mission-tab" data-toggle="pill" href="#v-pills-mission" role="tab" aria-controls="v-pills-mission" aria-selected="true">Mission</a>
+      <a class="nav-link" id="v-pills-vission-tab" data-toggle="pill" href="#v-pills-vission" role="tab" aria-controls="v-pills-vission" aria-selected="false">Vission</a>
+      <a class="nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-contact" role="tab" aria-controls="v-pills-contact" aria-selected="false">Contact</a>
+      
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-mission" role="tabpanel" aria-labelledby="v-pills-mission-tab">
+        <div class="div1">
+        <h1 class="text-white-50"> rk<br>
+         computer & training institute</h1>
+
+         <p style="text-align: center; font-weight: bold; color: white; padding-top: 10px;">
+           To inspire, nurture and educate leaders in tomorrow’s technology-centric 
+           environment while contributing to the solution of the most challenging problems of our time. 
+         </p>
+      </div>
+             <h2 style="text-transform: uppercase; text-align: center; padding-top: 10px;">Mission : </h2>
+             
+
+              <p>  "The mission of Rk Computer Institute is served by generating value for core investment management professionals and engaging with the core investment management industry to advance ethics, market integrity, and professional standards of practice, which collectively contributes value to society."</p>
+
+               <p> "Core investment management professionals are those individuals primarily involved in activities related to the investment decision-making process—generally portfolio managers, financial advisors, and research analysts on both the buy and sell side."
+                </p>
+                <p>
+               " The core investment management industry is comprised of firms (or larger firm business lines) primarily engaged in asset management (mutual funds, hedge funds, private equity, real estate investment, investment research and ratings, and investment advisory services), wealth management, fiduciary asset ownership (such as pension funds, endowments, and sovereign wealth funds), and their related regulators and standard setters."
+              </p>
+            </div>
+      <div class="tab-pane fade" id="v-pills-vission" role="tabpanel" aria-labelledby="v-pills-vission-tab">
+         <h1 style="text-align: center; color: red;"> The Institutional Vision<h1>
+         <p style="font-size: 18px; text-align: justify; letter-spacing: 1px; padding-top: 10px; padding-left: 15px;"> Rk Computer will become a premier student-centric technological research university, focusing on six “foundational pillars,” areas of true societal need where Rk Computer possesses significant depth and expertise: artificial intelligence, machine learning, and cybersecurity; data science and information systems; complex systems and networks; financial systems and technologies; biomedical engineering, healthcare, and life sciences; and resilience and sustainability. As our education and research capacity grows in these areas, so will our influence.</p>
+
+         <hr>
+         <div class="row" style="padding-top:20px; ">
+          <div class="col-3">
+            <img src="vi1.jpg" width="100%">
+          </div>
+          <div class="col-9">
+           <h2> Technology At Our Core</h2>
+       <p style="font-size: 18px; font-weight: "><small> "Our heritage is built on technology, from the transportation technology pioneered by the Rk Computer family to the countless technology-based companies launched and led by our alumni to the technological advancements created by our faculty researchers. Just as technology is our past, so it will differentiate us in the future, offering a distinctive educational experience to our students, driving our research and scholarship, leading us to devise novel teaching and learning methods and enhancing our administrative, outreach and communication activities." </small></p>
+           </div>
+         </div>  
+
+         <hr>
+           <div class="row" style="padding-top: 20px;">
+            <div class="col-9">
+              <h2>Through Collaboration, Impact</h2>
+             <p style="font-size: 18px;"><small> We will build a culture in which our strengths meld with and enhance those of synergistic and complementary collaborators. Together we will produce novel research, create visionary education programs and influence policy and the national agenda, enhancing the perspective of our students and the international reach and reputation of Rk Computer.</small></p>
+            </div>
+             <div class="col-3">
+              <img src="v2.jpg" width="100%">
+             </div>
+           </div>
+           
+      </div>
+      <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
+        <h1 class="bg-dark text-white" style="padding-top: 15px; padding-left: 10px; padding-bottom: 60px;"> Adress:<br>
+        <span style="font-size: 18px; font-family: monospace;">
+      "pipara-1 dhekaha, mahottari (nepal)<br>
+            on the way ofjanakpur to matihani_border road<br>
+            pincode:-45700"   
+        </span>
+      </h1>
+      <h2 class="bg-warning text-white" style="padding-top: 15px; padding-left: 10px; padding-bottom: 10px;">
+        mobile no:-<br>
+        <span style="font-size: 18px; font-family: monospace;"> 9860767468</span><br>
+
+        Email:-<br><span style="font-size: 18px; font-family: monospace;"> nabinmahato190@gmail.com</span>
+      </h2>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer class="container-fluid bg-dark">
+  <h1 style="text-align: center; text-transform: uppercase;color: white"> rk computer & training institute</h1>
+    <div class="row">
+      <div class="col-lg-4">
+       <ul type="none" class="bg-gradient-danger text-white" style="font-size: 20px"> Training:
+        <li> ADCS(Acquired Diploma in computer System)</li>
+        <li> DCS(Diploma in computer System)</li>
+        <li> Talley & accounting</li>
+        <li> Office(Latest Version)</li>
+         
+       </ul>
+        
+      </div>
+      <div class="col-lg-3">
+        <h4 class="text-white">Contact:</h4>
+        <p class="text-white" style="padding-left: 90px;"> 9860767468</p>
+        
+      </div>
+      <div class="col-lg-5">
+        <p class="text-white" style="font-size: 20px;">Address:</p>
+        <p class="text-white" style="text-transform: uppercase;">
+          "pipara-1 dhekaha, mahottari (nepal)<br>
+            janakpur to matihani_border road  <br>
+            pincode:-45700"
+
+       </p>
+        
+        
+      </div>
+      
+    </div>
+      
+</footer>
+
+
+
+</body>
+</html>
